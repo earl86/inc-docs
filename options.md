@@ -96,7 +96,7 @@ index_prefix `v1.2.0` | "idx_"             | string | 普通索引前缀，默�
 uniq_index_prefix `v1.2.0` | "uniq_"             | string | 唯一索引前缀，默认为 `uniq_`, 受审核参数 `check_index_prefix` 影响。为空时不限制
 table_prefix `v1.2.0` | ""             | string | 表名前缀,默认为空,即不限制
 wait_timeout `v1.1.2` | 0      | int | 远端数据库等待超时时间, 单位:秒, 默认值为 `0` 时表示使用数据库默认值
-
+innodb_large_prefix `v1.x.x` |        |     | 读取远端数据库这个参数以判断索引最大长度（单位：字节）,off:767,on:3072
 
 <!--
 inception_read_only     设置当前Inception服务器是不是只读的，这是为了防止一些人具有修改权限的帐号时，通过Inception误修改一些数据，如果inception_read_only设置为ON，则即使开了enable-execute，同时又有执行权限，也不会去执行，审核完成即返回
